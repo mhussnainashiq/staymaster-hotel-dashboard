@@ -1,0 +1,50 @@
+export const initialData = {
+  theme: 'light',
+  rooms: [
+    { id: '1', number: '101', type: 'Standard', floor: 1, rate: 120, status: 'available', capacity: 2, amenities: 'WiFi, TV, AC', notes: '' },
+    { id: '2', number: '102', type: 'Standard', floor: 1, rate: 120, status: 'occupied', capacity: 2, amenities: 'WiFi, TV, AC', notes: '' },
+    { id: '3', number: '201', type: 'Deluxe', floor: 2, rate: 180, status: 'available', capacity: 3, amenities: 'WiFi, TV, AC, Mini-bar', notes: '' },
+    { id: '4', number: '202', type: 'Deluxe', floor: 2, rate: 180, status: 'maintenance', capacity: 3, amenities: 'WiFi, TV, AC, Mini-bar', notes: 'AC repair' },
+    { id: '5', number: '301', type: 'Suite', floor: 3, rate: 280, status: 'available', capacity: 4, amenities: 'WiFi, TV, AC, Mini-bar, Jacuzzi', notes: '' },
+    { id: '6', number: '302', type: 'Suite', floor: 3, rate: 280, status: 'occupied', capacity: 4, amenities: 'WiFi, TV, AC, Mini-bar, Jacuzzi', notes: '' },
+    { id: '7', number: '103', type: 'Standard', floor: 1, rate: 120, status: 'available', capacity: 2, amenities: 'WiFi, TV, AC', notes: '' },
+    { id: '8', number: '203', type: 'Deluxe', floor: 2, rate: 180, status: 'available', capacity: 3, amenities: 'WiFi, TV, AC, Mini-bar', notes: '' },
+  ],
+  guests: [
+    { id: '1', name: 'Emma Thompson', email: 'emma.t@example.com', phone: '+1-555-0101', idType: 'Passport', idNumber: 'P1234567', address: '12 Oak St, Boston, MA', notes: 'Prefers high floor' },
+    { id: '2', name: 'James Rivera', email: 'j.rivera@email.com', phone: '+1-555-0102', idType: 'Driver License', idNumber: 'DL987654', address: '88 Pine Ave, Seattle, WA', notes: '' },
+    { id: '3', name: 'Sophia Chen', email: 'sophia.chen@email.com', phone: '+1-555-0103', idType: 'Passport', idNumber: 'P7654321', address: '5 Maple Rd, Austin, TX', notes: 'Allergic to feathers' },
+    { id: '4', name: 'Liam Patel', email: 'liam.p@email.com', phone: '+1-555-0104', idType: 'ID Card', idNumber: 'ID445566', address: '22 Cedar Ln, Denver, CO', notes: '' },
+    { id: '5', name: 'Olivia Brooks', email: 'o.brooks@email.com', phone: '+1-555-0105', idType: 'Passport', idNumber: 'P3344556', address: '9 Willow Ct, Miami, FL', notes: 'Business traveler' },
+  ],
+  reservations: [
+    { id: '1', guestId: '1', roomId: '2', checkIn: '2025-10-14', checkOut: '2025-10-18', status: 'checked-in', adults: 2, children: 0, total: 480, notes: 'Early check-in requested', createdAt: '2025-10-10' },
+    { id: '2', guestId: '2', roomId: '6', checkIn: '2025-10-15', checkOut: '2025-10-20', status: 'checked-in', adults: 2, children: 1, total: 1400, notes: '', createdAt: '2025-10-08' },
+    { id: '3', guestId: '3', roomId: '3', checkIn: '2025-10-18', checkOut: '2025-10-22', status: 'confirmed', adults: 2, children: 0, total: 720, notes: '', createdAt: '2025-10-12' },
+    { id: '4', guestId: '4', roomId: '5', checkIn: '2025-10-20', checkOut: '2025-10-25', status: 'confirmed', adults: 3, children: 1, total: 1400, notes: 'Honeymoon package', createdAt: '2025-10-11' },
+    { id: '5', guestId: '5', roomId: '1', checkIn: '2025-10-12', checkOut: '2025-10-15', status: 'checked-out', adults: 1, children: 0, total: 360, notes: '', createdAt: '2025-10-05' },
+  ],
+  housekeeping: [
+    { id: '1', roomId: '1', status: 'clean', assignedTo: 'Maria Lopez', priority: 'normal', notes: '', updatedAt: '2025-10-15' },
+    { id: '2', roomId: '2', status: 'dirty', assignedTo: 'Maria Lopez', priority: 'high', notes: 'Guest checked out late', updatedAt: '2025-10-15' },
+    { id: '3', roomId: '4', status: 'maintenance', assignedTo: 'Tom Harris', priority: 'high', notes: 'AC unit', updatedAt: '2025-10-14' },
+    { id: '4', roomId: '3', status: 'clean', assignedTo: 'Ana Ruiz', priority: 'normal', notes: '', updatedAt: '2025-10-15' },
+    { id: '5', roomId: '6', status: 'in-progress', assignedTo: 'Maria Lopez', priority: 'normal', notes: '', updatedAt: '2025-10-15' },
+  ],
+  roomService: [
+    { id: '1', roomId: '2', guestId: '1', items: 'Club sandwich, Orange juice', status: 'delivered', total: 28, orderedAt: '2025-10-15T09:30', notes: '' },
+    { id: '2', roomId: '6', guestId: '2', items: 'Breakfast platter x2, Coffee', status: 'preparing', total: 45, orderedAt: '2025-10-15T08:15', notes: 'No mushrooms' },
+    { id: '3', roomId: '2', guestId: '1', items: 'Late night snack', status: 'pending', total: 18, orderedAt: '2025-10-15T22:00', notes: '' },
+  ],
+  bills: [
+    { id: '1', reservationId: '1', guestId: '1', roomCharges: 480, serviceCharges: 28, tax: 50.8, total: 558.8, status: 'open', paidAmount: 0, createdAt: '2025-10-14' },
+    { id: '2', reservationId: '5', guestId: '5', roomCharges: 360, serviceCharges: 0, tax: 36, total: 396, status: 'paid', paidAmount: 396, createdAt: '2025-10-12' },
+  ],
+  staff: [
+    { id: '1', name: 'Maria Lopez', role: 'Housekeeping', email: 'maria@staymaster.demo', phone: '+1-555-0201', shift: 'Morning', status: 'active' },
+    { id: '2', name: 'Tom Harris', role: 'Maintenance', email: 'tom@staymaster.demo', phone: '+1-555-0202', shift: 'Day', status: 'active' },
+    { id: '3', name: 'Ana Ruiz', role: 'Housekeeping', email: 'ana@staymaster.demo', phone: '+1-555-0203', shift: 'Evening', status: 'active' },
+    { id: '4', name: 'David Kim', role: 'Front Desk', email: 'david@staymaster.demo', phone: '+1-555-0204', shift: 'Morning', status: 'active' },
+    { id: '5', name: 'Sarah Nguyen', role: 'Manager', email: 'sarah@staymaster.demo', phone: '+1-555-0205', shift: 'Day', status: 'active' },
+  ],
+}
